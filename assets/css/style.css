@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@500&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    background-color: #402218cf;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(242, 242, 242);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffce09;
+    border-radius: 10px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    position: fixed;
+    box-shadow: 0px 0px 5px 0px rgb(160, 160, 160);
+}
+
+#nav #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+
+.nav img {
+    width: 55px;
+    height: 55px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 5px 20px;
+    margin: 0px 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.nav a:hover {
+    color: #dea402;
+    transition: 0.3s ease;
+}
+
+#btn-nav {
+    width: 25px;
+    height: 25px;
+    display: none;
+}
+
+.btn-menu {
+    width: 80%;
+    text-align: right;
+}
+
+#btn-menu {
+    width: 25px;
+    height: 25px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.nav-menu {
+    width: 80vh;
+    height: 80vh;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.412);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(-1000px);
+    transition: 1s ease-in;
+}
+
+.nav-menu.active {
+    transform: translateX(0px);
+    transition: 1s ease-in;
+}
+
+.nav-menu a {
+    font-size: 1rem;
+    color: #000;
+}
+
+.nav-menu a:hover {
+    color: #dea402;
+    transition: 0.3s ease;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 70px 0px 40px;
+}
+
+/*--------------------------------------------------------------
+# Beranda
+--------------------------------------------------------------*/
+.beranda {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/assets/img/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.beranda span {
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    max-width: 90%;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Tentang
+--------------------------------------------------------------*/
+.tentang {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tentang img {
+    width: 500px;
+    height: 400px;
+    animation-name: tentang;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.area-tentang {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.judul {
+    font-size: 35px;
+    font-family: 'Courgette', cursive;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #ffce09;
+    margin: 10px 0px 15px;
+}
+
+
+.area-tentang p {
+    text-align: center;
+    letter-spacing: 1px;
+    color: #ececec;
+    font-family: 'Courgette', cursive;
+    line-height: 1.8;
+}
+
+@keyframes tentang {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, -20px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+/*--------------------------------------------------------------
+# visi
+--------------------------------------------------------------*/
+.area-visi {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+}
+
+.area-visi img {
+    width: 400px;
+    height: 550px;
+}
+
+.area-visi .main-carousel {
+    width: 400px;
+    height: 600px;
+}
+
+.visi-kiri {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.box-visi {
+    width: 280px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.box-visi img {
+    width: 60px;
+    height: 60px;
+}
+
+.box-visi h1 {
+    color: #ffce09;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.box-visi p {
+    color: #ececec;
+    font-size: 13px;
+}
+
+/*--------------------------------------------------------------
+# Menu
+--------------------------------------------------------------*/
+.menu {
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel,
+.main-carousel {
+    width: 90%;
+    min-height: 100%;
+    padding: 20px 0px;
+}
+
+.box-menu {
+    width: 500px;
+    margin: 0px 70px 0px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box-menu img {
+    width: 260px;
+    height: 260px;
+    border-radius: 10px;
+}
+
+.area-menu {
+    width: 200px;
+    margin: 0px 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.harga {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 10px 0px;
+    color: #dea402;
+}
+
+.area-menu .judul {
+    text-align: start;
+}
+
+.area-menu p {
+    font-size: 13px;
+    color: #ececec;
+}
+
+/*--------------------------------------------------------------
+# Review
+--------------------------------------------------------------*/
+.area-review {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box-review {
+    width: 280px;
+    height: 100%;
+    padding: 0px 20px 20px;
+    margin: 30px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #c3c3c3;
+    text-align: center;
+}
+
+.box-review img {
+    width: 70px;
+    height: 70px;
+    transform: translateY(-25px);
+    position: absolute;
+}
+
+.box-review h1 {
+    font-size: 18px;
+    margin: 50px 0px 10px;
+}
+
+.box-review p {
+    font-family: 'Courgette', cursive;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+/*--------------------------------------------------------------
+# Partner
+--------------------------------------------------------------*/
+.partner {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.412);
+}
+
+.partner .carousel-cell img {
+    width: 140px;
+    height: 50px;
+    margin: 10px 30px;
+}
+
+/*--------------------------------------------------------------
+# Lokasi
+--------------------------------------------------------------*/
+.lokasi {
+    padding: 90px 0px 20px;
+    align-items: center;
+}
+
+#map {
+    width: 80%;
+    height: 350px;
+    margin: 20px 0px;
+}
+
+.area-kontak {
+    width: 500px;
+}
+
+/*--------------------------------------------------------------
+# Galery
+--------------------------------------------------------------*/
+.area-gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.area-gallery img {
+    width: 280px;
+    height: 280px;
+    margin: 20px 30px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.area-gallery img:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+    width: 100%;
+    height: 100%;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.412);
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-1 .footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.footer-logo h1 {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-1 p {
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.sosial-media img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.footer-1,
+.footer-2,
+.footer-3,
+.footer-4 {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.footer-2 h1,
+.footer-3 h1,
+.footer-4 h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-2 a,
+.footer-4 a {
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.footer-4 a:hover {
+    color: #ffce09;
+}
+
+.footer-3 p {
+    font-size: 15px;
+    color: #000;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.625);
+}
+
+footer h1 {
+    text-align: center;
+    line-height: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+}
+
+footer h1 a {
+    color: #000000;
+    display: inline-block;
+}
+
+footer h1 a:hover {
+    color: #ffce09;
+}
+
+@media screen and (max-width:768px) {
+    .nav {
+        justify-content: space-between;
+        padding: 0px 30px;
+    }
+
+    .nav a {
+        display: none;
+    }
+
+    #btn-nav {
+        display: block;
+    }
+
+    .box-menu {
+        flex-direction: column;
+        margin: 10px;
+        width: 280px;
+    }
+
+    .area-menu {
+        width: 260px;
+        height: 220px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .area-visi .main-carousel {
+        width: 300px;
+    }
+
+    .area-visi img {
+        width: 300px;
+    }
+
+    .visi-kiri {
+        width: 300px;
+    }
+
+    .box-visi img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .nav-menu {
+        width: 100%;
+    }
+
+    .beranda span {
+        font-size: 30px;
+    }
+
+    .tentang img {
+        width: 300px;
+        height: 260px;
+    }
+
+    .area-tentang {
+        width: 300px;
+    }
+
+    .main-carousel {
+        width: 95%;
+    }
+
+    .main-carousel .carousel-cell img {
+        margin: 10px;
+    }
+}
